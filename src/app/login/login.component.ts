@@ -12,11 +12,11 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  private userlogin: string;
-  private userpwd: string;
-  private error: String;
-  private title: String = 'Connexion';
-  private user: User;
+  public userlogin: string;
+  public userpwd: string;
+  public error: String;
+  public title: String = 'Connexion';
+  public user: User;
 
   constructor(
     private sharedService: SharedService,
@@ -29,11 +29,11 @@ export class LoginComponent implements OnInit {
     this.user = new User();
   }
 
-  private login(): void {
+  public login(): void {
     this.loginService.getUser(this.userlogin).subscribe(
       (user) => {
         this.user = user;
-        if (this.userpwd === this.user.getUserPwd()) {
+        if (this.userpwd === this.user.userpwd) {
           this.sharedService.isConnected = true;
           this.router.navigate(['/home']);
         } else {

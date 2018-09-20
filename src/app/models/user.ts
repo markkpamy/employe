@@ -1,9 +1,13 @@
 export class User {
-  private userid: number;
-  private userlogin: string;
-  private userpwd: string;
+    public userlogin = 'admin';
+    public userpwd = 'secret';
+    public userid: number;
 
-  public getUserPwd() {
-    return this.userpwd;
-  }
+    constructor() {
+
+    }
+
+    public getUserPwd(): string {
+        return this.userpwd;
+    }
 }
