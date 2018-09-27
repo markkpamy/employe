@@ -13,7 +13,7 @@ import {Job} from '../models/job';
 })
 export class EmployeeComponent implements OnInit {
 
-    employee: Employee;
+    public employee: Employee;
     public employee_id: number;
     public error: any;
     public title: string;
@@ -35,7 +35,7 @@ export class EmployeeComponent implements OnInit {
     }
 
     private getEmployee(employee_id: number) {
-        this.employeeService.getEmployees().subscribe(
+        this.employeeService.getEmployee(employee_id).subscribe(
             (employee) => {
                 this.employee = employee;
             },
