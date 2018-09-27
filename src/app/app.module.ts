@@ -12,9 +12,11 @@ import {LoginService} from './services/login.service';
 import {HttpClientModule} from '@angular/common/http';
 import {EmployeesComponent} from './employees/employees.component';
 import {EmployeeService} from './employees/employee.service';
-import {RouterModule} from '@angular/router';
 import {CommonService} from './common.service';
 import { EmployeeComponent } from './employee/employee.component';
+import { ErrorComponent } from './error/error.component';
+import { DepartmentComponent } from './department/department.component';
+import { JobComponent } from './job/job.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,10 @@ import { EmployeeComponent } from './employee/employee.component';
         LoginComponent,
         HomeComponent,
         EmployeesComponent,
-        EmployeeComponent
+        EmployeeComponent,
+        ErrorComponent,
+        DepartmentComponent,
+        JobComponent
     ],
     imports: [
         BrowserModule,

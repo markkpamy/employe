@@ -12,7 +12,7 @@ export class EmployeesComponent implements OnInit {
 
     public employees: Employee[];
     private title: string;
-    private error: any;
+    public error: any;
 
     constructor(public employeeService: EmployeeService, public router: Router) {
     }

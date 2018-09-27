@@ -18,8 +18,6 @@ export class EmployeeComponent implements OnInit {
     public employee_id: number;
     public error: any;
     public title: string;
-    public departments: Department[];
-    public jobs: Job[];
 
     constructor(public activatedRoute: ActivatedRoute,
                 public employeeService: EmployeeService,
@@ -37,8 +35,6 @@ export class EmployeeComponent implements OnInit {
         } else {
             this.title = 'Ajouter un employé';
         }
-        this.getDepartments();
-        this.getJobs();
     }
 
     private getEmployee(employee_id: number) {
@@ -52,26 +48,6 @@ export class EmployeeComponent implements OnInit {
         );
     }
 
-    private getDepartments() {
-        this.commonService.getDepartments().subscribe(
-            (departments) => {
-                this.departments = departments;
-            }, (error) => {
-                this.error = error.message;
-            }
-        );
-    }
-
-    private getJobs() {
-        this.commonService.getJobs().subscribe(
-            (jobs) => {
-                this.jobs = jobs;
-            },
-            (error) => {
-                this.error = error.message;
-            }
-        );
-    }
 
     validateEmployee(id: number) {
         if (id > 0) {
@@ -109,6 +85,14 @@ export class EmployeeComponent implements OnInit {
         } else {
             this.router.navigate(['/home']);
         }
+    }
+
+    jobSelected(job_id: number) {
+        this.employee.job_id = job_id;
+    }
+
+    departmentSelected(department_id: number) {
+        this.employee.department_id = department_id;
     }
 
 
