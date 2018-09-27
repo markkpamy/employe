@@ -21,7 +21,7 @@
                       <li><a href="">Liste par Département</a></li>
                   </ul>
               </li>
-              <li *ngIf="sharedService.isConnected" ><a href="">Ajouter</a></li>
+              <li *ngIf="sharedService.isConnected" [routerLink]="['/addEmployee']"><a>Ajouter</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li *ngIf="!sharedService.isConnected"><a [routerLink]="['/login']" class="btn btn-link">Login</a></li>
