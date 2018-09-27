@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 export class EmployeeService {
-    private employeeSrvUrl = 'http://localhost:8080/EmployeesSrv';
+    private employeeSrvUrl = 'http://localhost:8080/EmployeesSrv/';
 
     constructor(public httpClient: HttpClient) {}
 

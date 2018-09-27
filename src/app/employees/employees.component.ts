@@ -18,7 +18,7 @@ export class EmployeesComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        this.getEmployees();
     }
 
     getEmployees(): void {
@@ -37,5 +37,4 @@ export class EmployeesComponent implements OnInit {
         this.router.navigate(['/detailEmployee/' + employee_id]);
     }
 
-    
 }

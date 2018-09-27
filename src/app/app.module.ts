@@ -31,7 +31,7 @@ import { EmployeeComponent } from './employee/employee.component';
         FormsModule,
         HttpClientModule,
     ],
-    providers: [SharedService, LoginService, EmployeeService,CommonService],
+    providers: [SharedService, LoginService, EmployeeService, CommonService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
