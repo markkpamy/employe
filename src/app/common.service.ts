@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 export class CommonService {
-    private employeeSrvUrl = 'http://localhost:8080/EmployeesSrv';
+    private employeeSrvUrl = 'http://localhost:8080/EmployeesSrv/';
     constructor(private httpClient: HttpClient) {}
 
     getJobs(): Observable<any> {
